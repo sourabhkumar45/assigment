@@ -16,7 +16,7 @@ const DropArea = () => {
 
     console.log(ele, sym, val);
     let d = await fetch(
-      `http://localhost:5000/getData?letter=${ele}&value=${val}&symbol=${sym}`
+      `https://assigment44.herokuapp.com/getData?letter=${ele}&value=${val}&symbol=${sym}`
     ).then((res) => res.json());
     if (d.length === 0) {
       alert("No record");
