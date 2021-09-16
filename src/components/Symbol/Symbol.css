@@ -1,0 +1,31 @@
+.symbol-container {
+  height: 20%;
+  width: 100%;
+  border-bottom: 1px solid black;
+  display: flex;
+}
+
+.symbols input {
+  background: rgb(235, 53, 83);
+  border-radius: 5%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  width: 70%;
+}
+.symbols {
+  padding: 10px;
+  background: rgb(235, 53, 83);
+  border-radius: 5%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px;
+  color: white;
+  width: 6%;
+  font-size: 25px;
+}
