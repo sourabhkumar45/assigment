@@ -5,6 +5,7 @@ import "./DropArea.css";
 let ele = "";
 let sym = "";
 let val = "";
+
 const DropArea = () => {
   const [data, setData] = useState([]);
   useEffect(() => {}, [data]);
@@ -79,6 +80,14 @@ const SmallDivs = (props) => {
       }
 
       div.innerHTML = item.payload;
+      let element = document.createElement("div");
+      element.innerHTML = `<div class="close-btn">X</div>`;
+      element.addEventListener("click", () => {
+        div.style.backgroundColor = "white";
+        div.innerHTML = "";
+        div.appendChild(element);
+      });
+      div.appendChild(element);
 
       div.style.color = "white";
       div.style.backgroundColor = "rgb(235, 53, 83)";
@@ -87,6 +96,10 @@ const SmallDivs = (props) => {
       isOver: !!monitor.isOver(),
     }),
   });
-  return <div className={"div " + props.type} ref={drop}></div>;
+  return (
+    <div className={"div " + props.type} ref={drop}>
+      <div className="close-btn">X</div>
+    </div>
+  );
 };
 export default DropArea;
